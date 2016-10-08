@@ -39,7 +39,7 @@ public class LapisAdditions
     public void init(FMLInitializationEvent event)
     {
     	logger.log(Level.INFO, "registering recipes");
-//    	CraftingRecipes.registerRecipes();
+    	CraftingRecipes.registerRecipes();
     	proxy.init();
     }
     
