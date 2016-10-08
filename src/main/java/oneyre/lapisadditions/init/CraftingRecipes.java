@@ -14,19 +14,19 @@ public class CraftingRecipes {
 		
 		ShapedRecipeBuilder recipeBuilder = new ShapedRecipeBuilder();
 		recipeBuilder.add(lapis, 0, 1, 2, 3, 5);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(LapisItems.lapisArmorHead, 1));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorHead)));
 		
 		recipeBuilder.clear();
 		recipeBuilder.addAll(lapis).remove(1);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(LapisItems.lapisArmorChest, 1));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorChest)));
 		
 		recipeBuilder.clear();
 		recipeBuilder.addAll(lapis).remove(4,7);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(LapisItems.lapisArmorLegs, 1));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorLegs)));
 		
 		recipeBuilder.clear();
 		recipeBuilder.add(lapis, 0, 2, 3, 5);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(LapisItems.lapisArmorFeet, 1));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorFeet)));
 		
 	}
 	
@@ -46,7 +46,7 @@ public class CraftingRecipes {
 		}
 		
 		public ShapedRecipeBuilder addAll(ItemStack itemStack) {
-			add(itemStack, 0,1,2,3,4,5,6,7,8,9);
+			add(itemStack, 0,1,2,3,4,5,6,7,8);
 			return this;
 		}
 		
@@ -61,17 +61,25 @@ public class CraftingRecipes {
 			recipe = new ItemStack[9];
 		}
 		
-		public IRecipe buildForOutput(Item item, int count) {
-			ItemStack output = new ItemStack(item, count);
-			//recipes which do not fit in a 2x2 grid are considered 3x3
-			int size = fitsIn2x2() ? 2 : 3;
-			return new ShapedRecipes(size, size, recipe, output);
+		public IRecipe buildForOutput(ItemStack itemStack) {
+			return new ShapedRecipes(recipeWidth(), recipeHeight(), recipe, itemStack);
 		}
 		
-		private boolean fitsIn2x2() {
-			boolean freeColumn = columnIsNull(0) || columnIsNull(2);
-			boolean freeRow = rowIsNull(0) || rowIsNull(2);
-			return freeColumn && freeRow;
+		private int recipeWidth() {
+			if(columnIsNull(0) && columnIsNull(1) && columnIsNull(2)) return 0;
+			else if (columnIsNull(0) || columnIsNull(2)) {
+				if (columnIsNull(1)) return 1;
+				else return 2;
+			} else return 3;
+			
+		}
+		
+		private int recipeHeight() {
+			if(rowIsNull(0) && rowIsNull(1) && rowIsNull(2)) return 0;
+			else if (rowIsNull(0) || rowIsNull(2)) {
+				if (rowIsNull(1)) return 1;
+				else return 2;
+			} else return 3;
 		}
 		
 		private boolean columnIsNull(int col) {

@@ -1,5 +1,6 @@
 /*
 /*/
+bin/*
 !/src/
 !.gitignore
 !gradlew*
@@ -8,7 +9,6 @@
 !/README.md
 !build.gradle
 !.travis.yml
-!/textures/
 !/gradle.properties
 !.gitattributes
 !ASSETS_LICENSE.txt
