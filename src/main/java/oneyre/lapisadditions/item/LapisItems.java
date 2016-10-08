@@ -1,5 +1,5 @@
 
-package oneyre.lapisadditions;
+package oneyre.lapisadditions.item;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,15 +7,16 @@ import java.util.List;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import oneyre.lapisadditions.LapisAdditions;
 
 public final class LapisItems {
 
 	private static final List<Item> itemsToRegister = new ArrayList<>();
 	
-	public static final ItemLapisArmor lapisArmorHead = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.HEAD), "Lapis Helm"));
-	public static final ItemLapisArmor lapisArmorChest = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.CHEST), "Lapis Chestplate"));
-	public static final ItemLapisArmor lapisArmorLegs = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.LEGS), "Lapis Leggings"));
-	public static final ItemLapisArmor lapisArmorFeet = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.FEET), "Lapis Boots"));
+	public static final ItemLapisArmor lapisArmorHead = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.HEAD), "lapis_helm"));
+	public static final ItemLapisArmor lapisArmorChest = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.CHEST), "lapis_chestplate"));
+	public static final ItemLapisArmor lapisArmorLegs = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.LEGS), "lapis_leggings"));
+	public static final ItemLapisArmor lapisArmorFeet = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.FEET), "lapis_boots"));
 	
 	public static void registerItems() {
 		for(Item item : itemsToRegister) {

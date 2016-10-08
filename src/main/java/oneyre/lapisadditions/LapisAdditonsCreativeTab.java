@@ -2,8 +2,9 @@ package oneyre.lapisadditions;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import oneyre.lapisadditions.item.LapisItems;
 
-public class LapisAdditonsCreativeTab extends CreativeTabs {
+public final class LapisAdditonsCreativeTab extends CreativeTabs {
 
 	public LapisAdditonsCreativeTab(String label) {
 		super(label);
