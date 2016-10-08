@@ -2,7 +2,7 @@ package oneyre.lapisadditions.proxy;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import oneyre.lapisadditions.client.ModelRegistrar;
+import oneyre.lapisadditions.rendering.ModelRegistrar;
 
 @SideOnly(Side.CLIENT)
 public final class CombinedClientProxy implements IProxy {

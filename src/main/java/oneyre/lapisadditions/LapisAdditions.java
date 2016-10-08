@@ -10,7 +10,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import oneyre.lapisadditions.item.LapisItems;
+import oneyre.lapisadditions.init.CraftingRecipes;
+import oneyre.lapisadditions.init.LapisItems;
 import oneyre.lapisadditions.proxy.IProxy;
 
 @Mod(modid = LapisAdditions.MODID, version = LapisAdditions.VERSION)
@@ -37,7 +38,8 @@ public class LapisAdditions
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	logger.log(Level.INFO, "Nothing to do here");
+    	logger.log(Level.INFO, "registering recipes");
+//    	CraftingRecipes.registerRecipes();
     	proxy.init();
     }
     

@@ -1,10 +1,10 @@
-package oneyre.lapisadditions.client;
+package oneyre.lapisadditions.rendering;
 
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
-import oneyre.lapisadditions.item.LapisItems;
+import oneyre.lapisadditions.init.LapisItems;
 
 public class ModelRegistrar {
 

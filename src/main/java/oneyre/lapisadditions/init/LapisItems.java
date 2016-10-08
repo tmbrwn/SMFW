@@ -1,5 +1,5 @@
 
-package oneyre.lapisadditions.item;
+package oneyre.lapisadditions.init;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import oneyre.lapisadditions.LapisAdditions;
+import oneyre.lapisadditions.item.ItemLapisArmor;
 
 public final class LapisItems {
 
