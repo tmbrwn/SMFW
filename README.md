@@ -1,6 +1,6 @@
 # Stuff My Friend Wanted
-## A Minecraft Mod that adds some stuff to the game
-----
+## A Minecraft mod that adds some stuff to the game
+
 ### Armor:
 - Lapis Armor
 - Redstone Armor (planned)
