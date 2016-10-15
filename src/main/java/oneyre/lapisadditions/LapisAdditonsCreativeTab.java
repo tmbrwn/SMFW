@@ -8,6 +8,7 @@ public final class LapisAdditonsCreativeTab extends CreativeTabs {
 
 	public LapisAdditonsCreativeTab(String label) {
 		super(label);
+		
 	}
 
 	@Override

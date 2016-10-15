@@ -13,7 +13,7 @@ public final class ItemLapisArmor extends ItemArmor {
 			12,
 			new int[]{1,4,5,2},
 			20,
-			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+			SoundEvents.ITEM_ARMOR_EQUIP_GOLD,
 			0.0F
 		);
 	

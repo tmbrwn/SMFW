@@ -3,3 +3,4 @@ item.lapisadditions:lapis_helm.name=Lapis Helm
 item.lapisadditions:lapis_chestplate.name=Lapis Chestplate
 item.lapisadditions:lapis_leggings.name=Lapis Leggings
 item.lapisadditions:lapis_boots.name=Lapis Boots
+itemGroup.lapisadditions=Lapis Additions
