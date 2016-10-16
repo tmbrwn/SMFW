@@ -1,4 +1,4 @@
-package oneyre.lapisadditions.init;
+package oneyre.smfw.init;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -14,19 +14,19 @@ public class CraftingRecipes {
 		
 		ShapedRecipeBuilder recipeBuilder = new ShapedRecipeBuilder();
 		recipeBuilder.add(lapis, 0, 1, 2, 3, 5);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorHead)));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.lapisArmorHead)));
 		
 		recipeBuilder.clear();
 		recipeBuilder.addAll(lapis).remove(1);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorChest)));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.lapisArmorChest)));
 		
 		recipeBuilder.clear();
 		recipeBuilder.addAll(lapis).remove(4,7);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorLegs)));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.lapisArmorLegs)));
 		
 		recipeBuilder.clear();
 		recipeBuilder.add(lapis, 0, 2, 3, 5);
-		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(LapisItems.lapisArmorFeet)));
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.lapisArmorFeet)));
 		
 	}
 	

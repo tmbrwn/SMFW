@@ -1,4 +1,4 @@
-package oneyre.lapisadditions.proxy;
+package oneyre.smfw.proxy;
 
 public interface IProxy {
 

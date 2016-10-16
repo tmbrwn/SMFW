@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "smfw",
+  "name": "Stuff My Friend Wanted",
+  "description": "A Minecraft mod that adds some stuff to the game",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Oneyre"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

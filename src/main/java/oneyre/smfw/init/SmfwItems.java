@@ -1,5 +1,5 @@
 
-package oneyre.lapisadditions.init;
+package oneyre.smfw.init;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import java.util.List;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import oneyre.lapisadditions.LapisAdditions;
-import oneyre.lapisadditions.item.ItemLapisArmor;
+import oneyre.smfw.Smfw;
+import oneyre.smfw.item.ItemLapisArmor;
 
-public final class LapisItems {
+public final class SmfwItems {
 
 	private static final List<Item> itemsToRegister = new ArrayList<>();
 	
@@ -28,7 +28,7 @@ public final class LapisItems {
 	public static <T extends Item> T setName(T item, String name) {
 		item.setRegistryName(name);
 		item.setUnlocalizedName(item.getRegistryName().toString());
-		item.setCreativeTab(LapisAdditions.creativeTab);
+		item.setCreativeTab(Smfw.creativeTab);
 		return item;
 	}
 	

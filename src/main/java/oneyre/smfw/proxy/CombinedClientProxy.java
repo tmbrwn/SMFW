@@ -1,15 +1,15 @@
-package oneyre.lapisadditions.proxy;
+package oneyre.smfw.proxy;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import oneyre.smfw.rendering.ModelRegistrar;
 
-@SideOnly(Side.SERVER)
-public class ServerProxy implements IProxy {
+@SideOnly(Side.CLIENT)
+public final class CombinedClientProxy implements IProxy {
 
 	@Override
 	public void preInit() {
-		// TODO Auto-generated method stub
-
+		ModelRegistrar.registerItemModels();
 	}
 
 	@Override
