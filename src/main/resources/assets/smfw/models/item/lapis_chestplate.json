@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "lapisadditions:items/lapis_chestplate"
+        "layer0": "smfw:items/lapis_chestplate"
     }
 }
