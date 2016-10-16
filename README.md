@@ -7,6 +7,7 @@
 
 ### Abilities:
 - Carry a pig! (planned)
+- Open double doors at the same time
 
 ### Items:
 - Chicken Repellant (planned)
