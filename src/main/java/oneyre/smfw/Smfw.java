@@ -4,12 +4,14 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import oneyre.smfw.event.DoorActivateHandler;
 import oneyre.smfw.init.CraftingRecipes;
 import oneyre.smfw.init.SmfwItems;
 import oneyre.smfw.proxy.IProxy;
@@ -29,7 +31,7 @@ public class Smfw
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
     	logger = event.getModLog();
-    	logger.log(Level.INFO, "registering items");
+    	logger.log(Level.INFO, "PREINIT");
     	
     	SmfwItems.registerItems();
     	proxy.preInit();
@@ -38,14 +40,17 @@ public class Smfw
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	logger.log(Level.INFO, "registering recipes");
+    	logger.log(Level.INFO, "INIT");
+    	
+    	MinecraftForge.EVENT_BUS.register(new DoorActivateHandler());
     	CraftingRecipes.registerRecipes();
     	proxy.init();
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-    	logger.log(Level.INFO, "Nothing here either");
+    	logger.log(Level.INFO, "POSTINIT");
+    	
     	proxy.postInit();
     }
 }
