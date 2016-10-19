@@ -19,6 +19,8 @@ public final class SmfwItems {
 	public static final ItemLapisArmor lapisArmorLegs = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.LEGS), "lapis_leggings"));
 	public static final ItemLapisArmor lapisArmorFeet = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.FEET), "lapis_boots"));
 	
+	public static final Item smfwOakDoor = registerLater(setName(new ))
+	
 	public static void registerItems() {
 		for(Item item : itemsToRegister) {
 			GameRegistry.register(item);

@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import oneyre.smfw.event.DoorActivateHandler;
 import oneyre.smfw.init.CraftingRecipes;
+import oneyre.smfw.init.SmfwBlocks;
 import oneyre.smfw.init.SmfwItems;
 import oneyre.smfw.proxy.IProxy;
 
@@ -34,6 +35,7 @@ public class Smfw
     	logger.log(Level.INFO, "PREINIT");
     	
     	SmfwItems.registerItems();
+    	SmfwBlocks.registerBlocks();
     	proxy.preInit();
     }
     

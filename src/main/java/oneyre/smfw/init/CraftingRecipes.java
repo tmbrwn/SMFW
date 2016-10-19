@@ -1,6 +1,8 @@
 package oneyre.smfw.init;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
@@ -9,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CraftingRecipes {
 
 	public static void registerRecipes() {
+		//Lapis Armor Items
 		ItemStack lapis = new ItemStack(Items.DYE, 1, 4);
 		
 		ShapedRecipeBuilder recipeBuilder = new ShapedRecipeBuilder();
@@ -26,6 +29,12 @@ public class CraftingRecipes {
 		recipeBuilder.clear();
 		recipeBuilder.add(lapis, 0, 2, 3, 5);
 		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.lapisArmorFeet)));
+		
+		//SMFW Doors
+		ItemStack wood = new ItemStack(Item.getItemFromBlock(Blocks.PLANKS));
+		recipeBuilder.clear();
+		recipeBuilder.add(wood, 0, 1, 3, 4, 6, 7);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(Item.getItemFromBlock(SmfwBlocks.smfwOakDoor))));
 		
 	}
 	
