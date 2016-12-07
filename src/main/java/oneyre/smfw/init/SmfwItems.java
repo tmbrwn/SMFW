@@ -4,13 +4,11 @@ package oneyre.smfw.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import oneyre.smfw.Smfw;
 import oneyre.smfw.item.ItemLapisArmor;
-import oneyre.smfw.item.ItemSmfwDoor;
 
 public final class SmfwItems {
 
@@ -20,8 +18,6 @@ public final class SmfwItems {
 	public static final ItemLapisArmor lapisArmorChest = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.CHEST), "lapis_chestplate"));
 	public static final ItemLapisArmor lapisArmorLegs = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.LEGS), "lapis_leggings"));
 	public static final ItemLapisArmor lapisArmorFeet = registerLater(setName(new ItemLapisArmor(EntityEquipmentSlot.FEET), "lapis_boots"));
-	
-	public static final Item smfwOakDoor = registerLater(setName(new ItemSmfwDoor(Blocks.OAK_DOOR), "oak_door"));
 	
 	public static void registerItems() {
 		for(Item item : itemsToRegister) {

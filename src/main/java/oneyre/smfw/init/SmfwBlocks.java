@@ -4,16 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import oneyre.smfw.Smfw;
-import oneyre.smfw.block.BlockSmfwDoor;
 
 public class SmfwBlocks {
 
 	private static final List<Block> blocksToRegister = new ArrayList<>();
-	
-	public static final BlockSmfwDoor smfwOakDoor = registerLater(setName(new BlockSmfwDoor(Material.WOOD), "oak_door"));
 	
 	public static void registerBlocks() {
 		for(Block block : blocksToRegister) {
