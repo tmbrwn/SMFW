@@ -9,10 +9,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CraftingRecipes {
 
 	public static void registerRecipes() {
+		ShapedRecipeBuilder recipeBuilder = new ShapedRecipeBuilder();
+		
 		// Lapis Armor Items
 		ItemStack lapis = new ItemStack(Items.DYE, 1, 4);
 
-		ShapedRecipeBuilder recipeBuilder = new ShapedRecipeBuilder();
+		recipeBuilder.clear();
 		recipeBuilder.add(lapis, 0, 1, 2, 3, 5);
 		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.lapisArmorHead)));
 
@@ -27,6 +29,25 @@ public class CraftingRecipes {
 		recipeBuilder.clear();
 		recipeBuilder.add(lapis, 0, 2, 3, 5);
 		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.lapisArmorFeet)));
+		
+		// Redstone Armor Items
+		ItemStack redstone = new ItemStack(Items.REDSTONE, 1, 0);
+		
+		recipeBuilder.clear();
+		recipeBuilder.add(redstone, 0, 1, 2, 3, 5);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.redstoneArmorHead)));
+
+		recipeBuilder.clear();
+		recipeBuilder.addAll(redstone).remove(1);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.redstoneArmorChest)));
+
+		recipeBuilder.clear();
+		recipeBuilder.addAll(redstone).remove(4, 7);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.redstoneArmorLegs)));
+
+		recipeBuilder.clear();
+		recipeBuilder.add(redstone, 0, 2, 3, 5);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.redstoneArmorFeet)));
 
 	}
 

@@ -6,10 +6,13 @@ import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import oneyre.smfw.Smfw;
+import oneyre.smfw.block.BlockRedstoneActivator;
 
 public class SmfwBlocks {
 
 	private static final List<Block> blocksToRegister = new ArrayList<>();
+	
+	public static final BlockRedstoneActivator redstoneActivator = registerLater(setName(new BlockRedstoneActivator(), "redstone_activator"));
 	
 	public static void registerBlocks() {
 		for(Block block : blocksToRegister) {

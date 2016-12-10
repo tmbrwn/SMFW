@@ -1,8 +1,5 @@
 package oneyre.smfw;
 
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.Logger;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -22,15 +19,15 @@ public class Smfw
     public static final String VERSION = "1.0";
 	public static final CreativeTabs creativeTab = new SmfwCreativeTab("smfw");
 	
-	private Logger logger;
+	public static final SmfwLogger logger = new SmfwLogger();
     
 	@SidedProxy(clientSide = "oneyre.smfw.proxy.CombinedClientProxy", serverSide = "oneyre.smfw.proxy.ServerProxy")
 	public static IProxy proxy;
 	
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-    	logger = event.getModLog();
-    	logger.log(Level.INFO, "PREINIT");
+    	logger.init(event.getModLog());
+    	logger.info("PREINIT");
     	
     	SmfwItems.registerItems();
     	SmfwBlocks.registerBlocks();
@@ -40,7 +37,7 @@ public class Smfw
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	logger.log(Level.INFO, "INIT");
+    	logger.info("INIT");
     	
     	CraftingRecipes.registerRecipes();
     	proxy.init();
@@ -48,7 +45,7 @@ public class Smfw
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-    	logger.log(Level.INFO, "POSTINIT");
+    	logger.info("POSTINIT");
     	
     	proxy.postInit();
     }
