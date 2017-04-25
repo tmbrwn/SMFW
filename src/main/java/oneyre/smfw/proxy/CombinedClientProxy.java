@@ -14,8 +14,6 @@ public final class CombinedClientProxy implements IProxy {
 
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override

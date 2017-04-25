@@ -2,8 +2,6 @@ package oneyre.smfw.block;
 
 import java.util.Random;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.MaterialTransparent;
@@ -82,12 +80,6 @@ public class BlockRedstoneActivator extends Block {
 	}
 
 	@Override
-	@Nullable
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
-		return NULL_AABB;
-	}
-
-	@Override
 	public boolean canCollideCheck(IBlockState state, boolean hitIfLiquid) {
 		return false;
 	}
@@ -106,6 +98,12 @@ public class BlockRedstoneActivator extends Block {
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
+	
+	@Override
+	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
+    {
+        return NULL_AABB;
+    }
 
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {

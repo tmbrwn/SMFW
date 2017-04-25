@@ -1,4 +1,3 @@
-
 package oneyre.smfw.init;
 
 import java.util.ArrayList;
