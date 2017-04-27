@@ -1,5 +1,6 @@
 package oneyre.smfw.init;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -48,7 +49,39 @@ public class CraftingRecipes {
 		recipeBuilder.clear();
 		recipeBuilder.add(redstone, 0, 2, 3, 5);
 		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.redstoneArmorFeet)));
-
+		
+		// Clubs
+		ItemStack wood = new ItemStack(Blocks.PLANKS, 1, 0);
+		ItemStack stone = new ItemStack(Blocks.COBBLESTONE, 1, 0);
+		ItemStack iron = new ItemStack(Items.IRON_INGOT, 1, 0);
+		ItemStack gold = new ItemStack(Items.GOLD_INGOT, 1, 0);
+		ItemStack diamond = new ItemStack(Items.DIAMOND, 1, 0);
+		ItemStack stick = new ItemStack(Items.STICK, 1, 0);
+		
+		recipeBuilder.clear();
+		recipeBuilder.add(wood, 1, 2, 3, 4);
+		recipeBuilder.add(stick, 6);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.woodenClub)));
+		
+		recipeBuilder.clear();
+		recipeBuilder.add(stone, 1, 2, 3, 4);
+		recipeBuilder.add(stick, 6);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.stoneClub)));
+		
+		recipeBuilder.clear();
+		recipeBuilder.add(iron, 1, 2, 3, 4);
+		recipeBuilder.add(stick, 6);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.ironClub)));
+		
+		recipeBuilder.clear();
+		recipeBuilder.add(gold, 1, 2, 3, 4);
+		recipeBuilder.add(stick, 6);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.goldClub)));
+		
+		recipeBuilder.clear();
+		recipeBuilder.add(diamond, 1, 2, 3, 4);
+		recipeBuilder.add(stick, 6);
+		GameRegistry.addRecipe(recipeBuilder.buildForOutput(new ItemStack(SmfwItems.diamondClub)));
 	}
 
 	private static class ShapedRecipeBuilder {

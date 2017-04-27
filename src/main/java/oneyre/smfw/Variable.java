@@ -22,4 +22,10 @@ public class Variable {
 			this.value = value;
 		}
 	}
+	public static class Float {
+		public float value;
+		public Float(float value) {
+			this.value = value;
+		}
+	}
 }

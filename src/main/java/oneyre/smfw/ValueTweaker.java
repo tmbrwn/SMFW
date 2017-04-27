@@ -12,9 +12,10 @@ public class ValueTweaker {
 	private static Map<String, Variable.Integer> ints = new HashMap<>();
 	private static Map<String, Variable.Double> doubles = new HashMap<>();
 	private static Map<String, Variable.Boolean> bools = new HashMap<>();
+	private static Map<String, Variable.Float> floats = new HashMap<>();
 	
 	private enum Type {
-		INT, DOUBLE, BOOL;
+		INT, DOUBLE, BOOL, FLOAT;
 	}
 	
 	public static Variable.Integer put(String var, int val) {
@@ -38,6 +39,13 @@ public class ValueTweaker {
 		return b;
 	}
 	
+	public static Variable.Float put(String var, float val) {
+		variables.put(var, Type.FLOAT);
+		Variable.Float f = new Variable.Float(val);
+		floats.put(var, f);
+		return f;
+	}
+	
 	public static void update(String var, String val) throws CommandException {
 		if(!variables.containsKey(var)) throw new WrongUsageException("commands.smfw.tweak.usage");
 		switch(variables.get(var)) {
@@ -49,6 +57,8 @@ public class ValueTweaker {
 			break;
 		case BOOL:
 			bools.get(var).value = Boolean.parseBoolean(val);
+		case FLOAT:
+			floats.get(var).value = Float.parseFloat(val);
 		}
 	}
 }

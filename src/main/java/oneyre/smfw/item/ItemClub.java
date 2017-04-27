@@ -26,11 +26,13 @@ public class ItemClub extends Item {
     private final double attackDamage;
     private final double attackSpeed;
     private final Item.ToolMaterial material;
+    Variable.Float strength;
 
     public ItemClub(Item.ToolMaterial material) {
     	this.material = material;
     	attackDamage = 5.0D + (double)material.getDamageVsEntity();
     	attackSpeed = -3.0D;
+    	strength = ValueTweaker.put(material.toString() + "_club_str", 2F);
     }
     
     @Override
@@ -40,7 +42,7 @@ public class ItemClub extends Item {
     		updateModifier(multimap, SharedMonsterAttributes.ATTACK_DAMAGE, ATTACK_DAMAGE_MODIFIER, attackDamage);
     		updateModifier(multimap, SharedMonsterAttributes.ATTACK_SPEED, ATTACK_SPEED_MODIFIER, attackSpeed);
     	}
-    	return  multimap;
+    	return multimap;
     }
     
     /**
@@ -103,7 +105,7 @@ public class ItemClub extends Item {
     public float getStrVsBlock(ItemStack stack, IBlockState state)
     {
         //TODO implement rules for smashing blocks with a club
-    	return 15.0F;
+    	return 1.5F;
     }
     
     @Override

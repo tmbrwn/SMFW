@@ -12,4 +12,6 @@
 ### Items:
 - Chicken Repellant (planned)
 - Maybe just farm animal repellant in general
-
+- New weapons
+    - Clubs
+    - ...
