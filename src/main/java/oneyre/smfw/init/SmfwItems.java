@@ -7,6 +7,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import oneyre.smfw.Smfw;
+import oneyre.smfw.item.ItemClub;
 import oneyre.smfw.item.ItemLapisArmor;
 import oneyre.smfw.item.ItemRedstoneArmor;
 
@@ -24,13 +25,19 @@ public final class SmfwItems {
 	public static final ItemRedstoneArmor redstoneArmorLegs = registerLater(setName(new ItemRedstoneArmor(EntityEquipmentSlot.LEGS), "redstone_leggings"));
 	public static final ItemRedstoneArmor redstoneArmorFeet = registerLater(setName(new ItemRedstoneArmor(EntityEquipmentSlot.FEET), "redstone_boots"));
 	
+	public static final ItemClub woodenClub = registerLater(setName(new ItemClub(Item.ToolMaterial.WOOD), "club_wood"));
+	public static final ItemClub stoneClub = registerLater(setName(new ItemClub(Item.ToolMaterial.STONE), "club_stone"));
+	public static final ItemClub ironClub = registerLater(setName(new ItemClub(Item.ToolMaterial.IRON), "club_iron"));
+	public static final ItemClub goldClub = registerLater(setName(new ItemClub(Item.ToolMaterial.GOLD), "club_gold"));
+	public static final ItemClub diamondClub = registerLater(setName(new ItemClub(Item.ToolMaterial.DIAMOND), "club_diamond"));
+	
 	public static void registerItems() {
 		for(Item item : itemsToRegister) {
 			GameRegistry.register(item);
 		}
 	}
 	
-	public static <T extends Item> T setName(T item, String name) {
+	private static <T extends Item> T setName(T item, String name) {
 		item.setRegistryName(name);
 		item.setUnlocalizedName(item.getRegistryName().toString());
 		item.setCreativeTab(Smfw.creativeTab);

@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import oneyre.smfw.ability.PickupPig;
 import oneyre.smfw.init.CraftingRecipes;
 import oneyre.smfw.init.SmfwBlocks;
@@ -52,4 +53,9 @@ public class Smfw
     	
     	proxy.postInit();
     }
+    
+    @EventHandler
+	public void serverStarting(FMLServerStartingEvent event) {
+    	event.registerServerCommand(new ValueTweakerCommand());
+	}
 }

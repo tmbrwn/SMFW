@@ -14,10 +14,17 @@ public class ModelRegistrar {
 		registerModel(SmfwItems.lapisArmorChest, Smfw.MODID + ":lapis_chestplate");
 		registerModel(SmfwItems.lapisArmorLegs, Smfw.MODID + ":lapis_leggings");
 		registerModel(SmfwItems.lapisArmorFeet, Smfw.MODID + ":lapis_boots");
+		
 		registerModel(SmfwItems.redstoneArmorHead, Smfw.MODID + ":redstone_helm");
 		registerModel(SmfwItems.redstoneArmorChest, Smfw.MODID + ":redstone_chestplate");
 		registerModel(SmfwItems.redstoneArmorLegs, Smfw.MODID + ":redstone_leggings");
 		registerModel(SmfwItems.redstoneArmorFeet, Smfw.MODID + ":redstone_boots");
+		
+		registerModel(SmfwItems.woodenClub, Smfw.MODID + ":club_wood");
+		registerModel(SmfwItems.stoneClub, Smfw.MODID + ":club_stone");
+		registerModel(SmfwItems.ironClub, Smfw.MODID + ":club_iron");
+		registerModel(SmfwItems.goldClub, Smfw.MODID + ":club_gold");
+		registerModel(SmfwItems.diamondClub, Smfw.MODID + ":club_diamond");
 	}
 
 	public static void registerBlockModels() {

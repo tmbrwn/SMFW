@@ -45,8 +45,6 @@ public class ValueTweaker {
 			ints.get(var).value = Integer.parseInt(val);
 			break;
 		case DOUBLE:
-			System.out.println("Changing the double " + var + " to " + val);
-			System.out.println("I have a reference to " + doubles.get(var).hashCode());
 			doubles.get(var).value = Double.parseDouble(val);
 			break;
 		case BOOL:

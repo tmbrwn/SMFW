@@ -3,8 +3,18 @@ item.smfw:lapis_helm.name=Lapis Helm
 item.smfw:lapis_chestplate.name=Lapis Chestplate
 item.smfw:lapis_leggings.name=Lapis Leggings
 item.smfw:lapis_boots.name=Lapis Boots
+
 item.smfw:redstone_helm.name=Redstone Helm
 item.smfw:redstone_chestplate.name=Redstone Chestplate
 item.smfw:redstone_leggings.name=Redstone Leggings
 item.smfw:redstone_boots.name=Redstone Boots
+
+item.smfw:club_wood.name=Wooden Club
+item.smfw:club_stone.name=Stone Club
+item.smfw:club_iron.name=Iron Club
+item.smfw:club_gold.name=Golden Club
+item.smfw:club_diamond.name=Diamond Club
+
 itemGroup.smfw=SMFW
+
+commands.smfw.tweak.usage="tweak variable value"
