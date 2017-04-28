@@ -57,6 +57,7 @@ public class ValueTweaker {
 			break;
 		case BOOL:
 			bools.get(var).value = Boolean.parseBoolean(val);
+			break;
 		case FLOAT:
 			floats.get(var).value = Float.parseFloat(val);
 		}
