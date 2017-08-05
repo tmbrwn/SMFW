@@ -25,6 +25,12 @@ public class ModelRegistrar {
 		registerModel(SmfwItems.ironClub, Smfw.MODID + ":club_iron");
 		registerModel(SmfwItems.goldClub, Smfw.MODID + ":club_gold");
 		registerModel(SmfwItems.diamondClub, Smfw.MODID + ":club_diamond");
+		
+		registerModel(SmfwItems.woodenShoge, Smfw.MODID + ":shoge_wood");
+		registerModel(SmfwItems.stoneShoge, Smfw.MODID + ":shoge_stone");
+		registerModel(SmfwItems.ironShoge, Smfw.MODID + ":shoge_iron");
+		registerModel(SmfwItems.goldShoge, Smfw.MODID + ":shoge_gold");
+		registerModel(SmfwItems.diamondShoge, Smfw.MODID + ":shoge_diamond");
 	}
 
 	public static void registerBlockModels() {

@@ -1,7 +1,7 @@
 package oneyre.smfw;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -9,7 +9,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
-import oneyre.smfw.ability.PickupPig;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+import oneyre.smfw.entity.EntityFlyingShoge;
 import oneyre.smfw.init.CraftingRecipes;
 import oneyre.smfw.init.SmfwBlocks;
 import oneyre.smfw.init.SmfwItems;
@@ -34,7 +35,7 @@ public class Smfw
     	
     	SmfwItems.registerItems();
     	SmfwBlocks.registerBlocks();
-    	proxy.preInit();
+    	proxy.preInit(event);
     }
     
     @EventHandler
@@ -43,15 +44,16 @@ public class Smfw
     	logger.info("INIT");
     	
     	CraftingRecipes.registerRecipes();
-		MinecraftForge.EVENT_BUS.register(new PickupPig());
-    	proxy.init();
+    	EntityRegistry.registerModEntity(new ResourceLocation(Smfw.MODID + ":flyingshoge"), EntityFlyingShoge.class, "Flying Shoge", 0, this, 25, 1, true);
+//		MinecraftForge.EVENT_BUS.register(new PickupPig());
+    	proxy.init(event);
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
     	logger.info("POSTINIT");
     	
-    	proxy.postInit();
+    	proxy.postInit(event);
     }
     
     @EventHandler

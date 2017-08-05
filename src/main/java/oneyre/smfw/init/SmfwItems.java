@@ -7,6 +7,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import oneyre.smfw.Smfw;
+import oneyre.smfw.item.ItemShoge;
 import oneyre.smfw.item.ItemClub;
 import oneyre.smfw.item.ItemLapisArmor;
 import oneyre.smfw.item.ItemRedstoneArmor;
@@ -30,6 +31,12 @@ public final class SmfwItems {
 	public static final ItemClub ironClub = registerLater(setName(new ItemClub(Item.ToolMaterial.IRON), "club_iron"));
 	public static final ItemClub goldClub = registerLater(setName(new ItemClub(Item.ToolMaterial.GOLD), "club_gold"));
 	public static final ItemClub diamondClub = registerLater(setName(new ItemClub(Item.ToolMaterial.DIAMOND), "club_diamond"));
+	
+	public static final ItemShoge woodenShoge = registerLater(setName(new ItemShoge(Item.ToolMaterial.WOOD), "shoge_wood"));
+	public static final ItemShoge stoneShoge = registerLater(setName(new ItemShoge(Item.ToolMaterial.STONE), "shoge_stone"));
+	public static final ItemShoge ironShoge = registerLater(setName(new ItemShoge(Item.ToolMaterial.IRON), "shoge_iron"));
+	public static final ItemShoge goldShoge = registerLater(setName(new ItemShoge(Item.ToolMaterial.GOLD), "shoge_gold"));
+	public static final ItemShoge diamondShoge = registerLater(setName(new ItemShoge(Item.ToolMaterial.DIAMOND), "shoge_diamond"));
 	
 	public static void registerItems() {
 		for(Item item : itemsToRegister) {

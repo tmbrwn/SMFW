@@ -1,42 +1,24 @@
 package oneyre.smfw.item;
 
-import java.util.Collections;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTool;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
-public class ItemClub extends ItemTool {
+public class ItemClub extends ItemWeapon {
+	
+	private static final float ATK_DMG = 4.0F;
+	private static final float ATK_SPD = -3.0F;
 
     public ItemClub(Item.ToolMaterial material) {
-    	super(4.0F, -3.0F, material, Collections.<Block>emptySet());
-    	maxStackSize = 1;
-    	setMaxDamage(material.getMaxUses());
+    	super(ATK_DMG, ATK_SPD, material);
     }
-    
-    //TODO implement rules for smashing blocks with a club
-    @Override
-    public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState state, BlockPos pos, EntityLivingBase entityLiving)
-    {
-        if ((double)state.getBlockHardness(worldIn, pos) != 0.0D)
-        {
-            stack.damageItem(2, entityLiving);
-        }
 
-        return true;
-    }
-    
     //TODO apply slow/daze to target
-    @Override
-    public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
-    {
-        stack.damageItem(1, attacker);
-        return true;
-    }
+	@Override
+	protected boolean hitEffect(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+		return true;
+	}
+    
+    
 
 }

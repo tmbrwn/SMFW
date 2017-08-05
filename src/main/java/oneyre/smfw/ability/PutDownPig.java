@@ -17,8 +17,6 @@ public class PutDownPig {
 	public void putDownPig(RightClickBlock event) {
 //		MinecraftForge.EVENT_BUS.unregister(upsideDown);
 		MinecraftForge.EVENT_BUS.unregister(this);
-		
-		System.out.println("putdown! " + event.getWorld().isRemote);
 //		if(!event.getWorld().isRemote)
 		event.getEntity().removePassengers();
 	}
