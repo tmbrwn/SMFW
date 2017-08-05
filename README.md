@@ -9,6 +9,8 @@
 - Carry a pig! (planned)
 
 ### Items:
+- Chicken Repellant (planned)
+- Hot dogs (planned)
 - New weapons
     - Clubs
     - Chain-Scythe (planned)
